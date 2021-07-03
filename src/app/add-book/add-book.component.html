@@ -1,0 +1,21 @@
+<div class = "form">
+
+    <h1>ADD A BOOK</h1>
+    <br>
+
+    <form>
+        <input #book_id placeholder = "Book ID" type = "text" name = "book_id"><br><br>
+        <input #book_name placeholder = "Book name" type = "text" name = "book_name"><br><br>
+        <input #author_name placeholder = "Author name" type = "text" name = "author_name"><br><br>
+        <input #year_published placeholder = "Year Published" type = "text" name = "year_published"><br><br>
+        <input #description placeholder = "Description" type = "text" name = "description"><br><br>
+        <select #book_status name="book_status" id="book_status">
+            <option value="available">Available</option>
+            <option value="issues">Issued</option>
+        </select><br><br>
+        <button class="submit" (click)="$event.preventDefault(); submitBook(book_id.value,book_name.value,author_name.value,year_published.value,description.value,book_status.value)">Add book</button>
+    </form>
+    <p>{{response}}</p>
+    <br><a routerLink = "/manager">Return</a>
+</div>
+

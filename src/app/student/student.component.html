@@ -1,0 +1,22 @@
+<div class="body">
+    <h1>Books</h1>
+    
+    <table class="books" width="100%">
+        <tr>
+            <th>Book name</th>
+            <th>Author name</th>
+            <th>Year published</th>
+            <th>Description</th> 
+            <th>Issue book</th>
+        </tr>
+    <tr *ngFor="let b of books; let i=index;" >
+        <td>{{b.book_name}}</td>
+        <td>{{b.author_name}}</td>
+        <td>{{b.year_published}}</td>
+        <td>{{b.description}}</td>
+        <td><button class="submit" (click)="requestIssuance(b.book_id)">Request Issuance</button></td>
+    </tr>
+    </table>
+    <td>{{response}}</td>
+</div>
+

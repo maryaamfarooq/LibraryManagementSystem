@@ -1,0 +1,21 @@
+<div class = "form">
+
+    <h1>SIGN UP</h1>
+    <br>
+
+    <form>
+        <input #username placeholder = "Username" type = "text" name = "userID"><br><br>
+        <input #pass placeholder = "Password" type = "password" name = "password"><br><br>
+        <input #fname placeholder = "First Name" type = "text" name = "firstName"><br><br>
+        <input #lname placeholder = "Last Name" type = "text" name = "lastName"><br><br>
+        <select #user_type name="user_type" id="user_type">
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+        </select><br><br>
+        <button class="submit" (click) = "$event.preventDefault(); onSend(fname.value, lname.value, username.value, pass.value, user_type.value)">Sign Up</button>
+    </form>
+
+    <p class = "error">{{response}}</p>
+
+</div>
+

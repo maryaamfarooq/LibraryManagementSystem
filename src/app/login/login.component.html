@@ -1,0 +1,19 @@
+<div class = "form">
+
+    <h1>LOG IN</h1>
+    <br>
+
+    <form>
+        <input id="username" #username placeholder = "Username" type = "text" name = "userID"><br><br>
+        <input #pass placeholder = "Password" type = "password" name = "password"><br><br>
+        <button class="submit" (click) = "$event.preventDefault(); onSend(username.value, pass.value)">Login</button>
+    </form>
+
+    <p class="error">{{userType}}</p>
+
+    <a routerLink = "/sign-up">Sign Up</a>
+
+    <!-- <p class = "error">{{response}}</p> -->
+
+</div>
+

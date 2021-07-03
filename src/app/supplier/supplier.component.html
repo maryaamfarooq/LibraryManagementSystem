@@ -1,0 +1,24 @@
+<div class="body">
+    <h1>Supplier Book Requests</h1>
+    
+    <table width="100%" width="100%">
+        <tr>
+            <th>Request ID</th>
+            <th>Book name</th>
+            <th>Author name</th>
+            <th>Manager ID</th>
+            <th>Date of request</th> 
+            <th>Request Status</th>
+            <th>Confirm</th>
+        </tr>
+    <tr *ngFor="let s of supplies; let i=index;" >
+        <td>{{s.req_id}}</td>
+        <td>{{s.book_name}}</td>
+        <td>{{s.author_name}}</td>
+        <td>{{s.username}}</td>
+        <td>{{s.date_of_request}}</td>
+        <td>{{s.supp_req_status}}</td>
+        <td><button class="submit" (click)="approveRequest(s.req_id,i)">Confirm Request</button></td>
+    </tr>
+    </table>
+</div>

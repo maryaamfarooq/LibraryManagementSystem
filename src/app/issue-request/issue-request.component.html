@@ -1,0 +1,26 @@
+<div class="body">
+    <h1>Issue Requests</h1>
+    
+    <table width="100%" width="100%">
+        <tr>
+            <th>Request ID</th>
+            <th>Username</th>
+            <th>Date of Request</th>
+            <th>Book ID</th>
+            <th>Book name</th>
+            <th>Author name</th>
+            <th>Approve</th>
+        </tr>
+    <tr *ngFor="let s of issue_request; let i=index;" >
+        <td>{{s.req_id}}</td>
+        <td>{{s.username}}</td>
+        <td>{{s.date_of_request}}</td>
+        <td>{{s.book_id}}</td>
+        <td>{{s.book_name}}</td>
+        <td>{{s.author_name}}</td>
+        <td><button class="submit" (click)="approveRequest(s.req_id, s.book_id,i)">Approve</button></td>
+    </tr>
+    </table>
+    <br><br><a routerLink = "/manager">Return</a>
+</div>
+

@@ -1,0 +1,16 @@
+<div class = "form">
+
+    <h1>Send Request</h1>
+    <br>
+
+    <form>
+        <input #book_name placeholder = "Book name" type = "text" name = "book_name"><br><br>
+        <input #book_author placeholder = "Author name" type = "text" name = "book_author"><br><br>
+
+        <button class="submit" (click)="$event.preventDefault(); submitRequest(book_name.value, book_author.value)">Send Request</button>
+    </form>
+    <p>{{response}}</p>
+    <a routerLink = "/manager">Return</a>
+
+</div>
+
